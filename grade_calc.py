@@ -1,5 +1,7 @@
+
 nbr_lab_problems = input("Enter the number of labs completed: ")
-nbr_quizzes = input("Enter the number of quizzes completed: ")grade_assignment_1 = input("Enter grade for Assignment 1: ")
+nbr_quizzes = input("Enter the number of quizzes completed: ")
+grade_assignment_1 = input("Enter grade for Assignment 1: ")
 grade_assignment_2 = input("Enter grade for Assignment 2: ") 
 grade_assignment_3 = input("Enter grade for Assignment 3: ") 
 grade_assignment_4 = input("Enter grade for Assignment 4: ") 
@@ -8,7 +10,7 @@ grade_midterm_2 = input("Enter grade for Midterm 2: ")
 grade_final = input("Enter grade for Final Exam: ")
 grade_midterm_final = input("Enter grade for Midterms and Final Preparation: ")
 
-# Calculations Labs & Quizzes 
+# Weight Labs & Quizzes 
 
 if nbr_lab_problems > 6:
     lab_weight = 20
@@ -20,7 +22,21 @@ if nbr_quizzes > 6:
 else:
     quizzes_weight = nbr_quizzes * (10/3)
 
-# Calc. Assignments & Midterms
+# Weight Assignments & Midterms
 
-assigments_weight = (grade_assignment_1 + grade_assignment_2 +grade_assignment_3 + grade_assignment_4) / 4 * 0.16 
-midterms_weight = (grade_midterm_1 + grade_midterm_2) / 2  
+weight_assignments = 0.04 * (grade_assignment_1 + grade_assignment_2 +grade_assignment_3 + grade_assignment_4)
+weight_midterms = 0.125 * (grade_midterm_1 + grade_midterm_2) 
+
+# Weight Final & Midterm and Final prep.
+
+weight_final = grade_final * 0.18
+weight_midterm_final = grade_midterm_final * 0.06
+
+# Total grade
+
+total_grade = weight_midterm_final + weight_final + weight_midterms + weight_assignments + quizzes_weight + lab_weight
+
+# Total grade output
+
+print(f"Your grade is: {total_grade}")
+
