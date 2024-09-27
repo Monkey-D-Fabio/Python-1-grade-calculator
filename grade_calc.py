@@ -33,9 +33,9 @@ weight_midterms = 0.125 * (grade_midterm_1 + grade_midterm_2)
 weight_final = grade_final * 0.18
 weight_midterm_final = grade_midterm_final * 0.06
 
-# Total grade
+# Total grade rounded
 
-total_grade = weight_midterm_final + weight_final + weight_midterms + weight_assignments + quizzes_weight + lab_weight
+total_grade = round(weight_midterm_final + weight_final + weight_midterms + weight_assignments + quizzes_weight + lab_weight)
 
 # Total grade output
 
