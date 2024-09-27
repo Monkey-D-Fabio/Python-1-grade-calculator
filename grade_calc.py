@@ -1,3 +1,4 @@
+# Input for different grades
 
 nbr_lab_problems = input("Enter the number of labs completed: ")
 nbr_quizzes = input("Enter the number of quizzes completed: ")
